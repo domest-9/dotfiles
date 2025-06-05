@@ -13,6 +13,6 @@ Nerd Fonts used for the icons in the status bar, so you need to install them fir
 sudo pacman -S nerd-fonts-jetbrains-mono
 ```
 Or download all Nerd Fonts 
-````
+```
 sudo pacman -S nerd-fonts
 ```
