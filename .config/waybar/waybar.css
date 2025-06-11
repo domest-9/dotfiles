@@ -1,0 +1,58 @@
+/* Noir Painting - for dark, muted, painterly wallpapers */
+
+@define-color bg0_h           #191716;
+@define-color bg0             #23201e;
+@define-color bg1             #2c2927;
+@define-color bg2             #3a3633;
+@define-color bg3             #4a4541;
+@define-color bg4             #5a534e;
+@define-color gray            #7a736c;
+@define-color fg4             #b1a99f;
+@define-color fg3             #c2bcb3;
+@define-color fg2             #d2ccc4;
+@define-color fg1             #e0dbd4;
+@define-color fg0             #ede9e3;
+@define-color ochre           #bfa97a;
+@define-color clay            #a68c6d;
+@define-color bone            #e7dbc7;
+@define-color accent          #bfa97a;
+@define-color accent2         #a68c6d;
+
+@define-color white           #f6f3ee;
+@define-color black           #181716;
+
+/* Main Colors */
+@define-color shadow          shade(@bg0_h, 0.5);
+@define-color main-fg         @fg3;
+@define-color main-bg         @bg0_h;
+@define-color main-br         @fg4;
+
+@define-color active-bg       @accent;
+@define-color active-fg       @bg0_h;
+
+@define-color hover-bg        @bg2;
+@define-color hover-fg        alpha(@fg0, 0.75);
+
+/* Module Colors */
+@define-color module-fg       @fg3;
+@define-color workspaces      @bg1;
+
+@define-color cpuinfo         @bg1;
+@define-color memory          @bg2;
+@define-color cpu             @bg3;
+@define-color distro-fg       @bg0_h;
+@define-color distro-bg       @accent2;
+@define-color time            @bg3;
+@define-color date            @bg2;
+@define-color tray            @bg1;
+
+@define-color pulseaudio      @bg1;
+@define-color backlight       @bg2;
+@define-color battery         @bg3;
+@define-color power           @accent;
+
+/* State Colors */
+@define-color warning         #c49a6c;
+@define-color critical        #a65c3a;
+@define-color charging        @fg2;
+

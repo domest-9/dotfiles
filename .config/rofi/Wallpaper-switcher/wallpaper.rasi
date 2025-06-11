@@ -1,0 +1,54 @@
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    background-color: @bg0;
+    text-color: @fg0;
+}
+
+window {
+    background-color: @bg0;
+    width: 1000px;
+    border: 2px;
+    border-color: @border;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+listview {
+    columns: 3;
+    lines: 2;
+    spacing: 20px;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: @bg1;
+}
+
+element-icon {
+    size: 250px;
+    border-radius: 4px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    padding: 10px 0 0 0;
+}
+
+element selected {
+    background-color: @bg2;
+}
+
+element-text selected {
+    text-color: @accent;
+}
+
+prompt {
+    enabled: true;
+    padding: 0 0 20px 0;
+    text-color: @accent;
+    font: "JetBrainsMono Nerd Font Bold 14";
+}
