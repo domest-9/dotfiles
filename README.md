@@ -18,3 +18,23 @@ Or download all Nerd Fonts
 sudo pacman -S nerd-fonts
 ```
 
+## Rofi 
+1. make executable 
+
+```
+chod +x wifi-manager.sh 
+```
+
+2. Install dependencies (if not already installed):
+```
+sudo pacman -S rofi networkmanager libnotify
+``` 
+
+3. Ensure NetworkMangager is running:
+```
+sudo systemctl enable --now NetworkManager
+
+```
+
+
+## Waybar
