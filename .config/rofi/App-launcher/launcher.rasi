@@ -1,4 +1,4 @@
-@import "../noir-painting.css"
+@import "../colors.rasi"
 
 configuration {
     font: "JetBrainsMono Nerd Font 12";
@@ -19,7 +19,7 @@ window {
     border: 2px solid;
     border-radius: 18px;
     border-color: @accent;
-    background-color: @bg0;
+    background-color: @bg;
 }
 
 mainbox {
@@ -33,7 +33,7 @@ inputbar {
     spacing: 10px;
     border-radius: 12px;
     background-color: @bg1;
-    text-color: @fg0;
+    text-color: @fg;
     children: [prompt, entry];
     orientation: horizontal;
     vertical-align: 0.5;
@@ -44,7 +44,7 @@ prompt {
     min-width: 140px;
     border-radius: 10px;
     background-color: @accent;
-    text-color: @bg0;
+    text-color: @bg;
     font: "JetBrainsMono Nerd Font Bold 13";
     vertical-align: 0.5;
 }
@@ -52,7 +52,7 @@ prompt {
 entry {
     padding: 10px 12px;
     background-color: transparent;
-    text-color: @fg0;
+    text-color: @fg;
     cursor: text;
     placeholder: "Search…";
     placeholder-color: @fg1;
@@ -70,14 +70,14 @@ listview {
     layout: vertical;
     spacing: 18px;
     background-color: transparent;
-    text-color: @fg0;
+    text-color: @fg;
 }
 
 element {
     padding: 0px;
     border-radius: 12px;
     background-color: @bg1;
-    text-color: @fg0;
+    text-color: @fg;
     orientation: horizontal;
     cursor: pointer;
     vertical-align: 0.5;
@@ -85,11 +85,12 @@ element {
 
 element normal.normal {
     background-color: @bg1;
-    text-color: @fg0;
+    text-color: @fg;
 }
+
 element selected.normal {
     background-color: @accent;
-    text-color: @bg0;
+    text-color: @bg;
 }
 
 element-icon {
@@ -108,9 +109,10 @@ element-text {
     vertical-align: 0.5;
     horizontal-align: 0.0;
 }
+
 element-text selected {
     background-color: transparent;
-    text-color: @bg0;
+    text-color: @bg;
     font: "JetBrainsMono Nerd Font Bold 13";
 }
 
@@ -119,12 +121,13 @@ error-message {
     border: 2px solid;
     border-radius: 18px;
     border-color: @accent;
-    background-color: @bg0;
-    text-color: @fg0;
+    background-color: @bg;
+    text-color: @fg;
 }
+
 textbox {
-    background-color: @bg0;
-    text-color: @fg0;
+    background-color: @bg;
+    text-color: @fg;
     vertical-align: 0.5;
     horizontal-align: 0.0;
     highlight: none;

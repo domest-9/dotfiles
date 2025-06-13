@@ -1,42 +1,165 @@
+@import "../colors.rasi"
 
 * {
+    /* Global settings */
     font: "JetBrainsMono Nerd Font 12";
-    background-color: @main_bg;
-    text-color: @main_fg;
+    background-color: transparent;
+    text-color: @fg;
 }
 
 window {
-    background-color: @main_bg;
-    border: 2px;
-    border-color: @active_bg;
-    border-radius: 12px;
-    padding: 20px;
+    background-color: @bg;
+    width: 400px;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 16px;
+    padding: 24px;
 }
 
-listview {
+mainbox {
     background-color: transparent;
-    spacing: 10px;
+    spacing: 20px;
 }
 
-element {
+inputbar {
     background-color: @bg1;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-element selected {
-    background-color: @active_bg;
-    text-color: @active_fg;
-}
-
-element-text selected {
-    text-color: @active_fg;
-    font: "JetBrainsMono Nerd Font Bold 12";
+    border: 1px solid;
+    border-color: @bg2;
+    border-radius: 16px;
+    padding: 16px 20px;
+    spacing: 12px;
+    margin: 0 0 8px 0;
 }
 
 prompt {
     enabled: true;
-    padding: 0 0 10px 0;
-    text-color: @active_bg;
-    font: "JetBrainsMono Nerd Font Bold 13";
+    padding: 12px 0 16px 0;
+    text-color: @accent;
+    font: "JetBrainsMono Nerd Font Bold 14";
+}
+
+entry {
+    enabled: false;
+    placeholder: "";
+}
+
+listview {
+    background-color: transparent;
+    spacing: 12px;
+    margin: 12px 0;
+    lines: 8;
+    fixed-height: true;
+    dynamic: false;
+}
+
+element {
+    background-color: @bg1;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+element normal.normal {
+    background-color: @bg1;
+    text-color: @fg3;
+    border-color: @bg2;
+}
+
+element normal.urgent {
+    background-color: @warning;
+    text-color: @bgh;
+    border-color: @warning;
+}
+
+element normal.active {
+    background-color: @accent2;
+    text-color: @bgh;
+    border-color: @accent2;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element selected.urgent {
+    background-color: @critical;
+    text-color: @white;
+    border-color: @critical;
+}
+
+element selected.active {
+    background-color: @clay;
+    text-color: @white;
+    border-color: @clay;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-text selected {
+    text-color: @bg;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 4px;
+    handle-color: @accent;
+    background-color: @bg2;
+    border-radius: 2px;
+    margin: 0 4px 0 0;
+}
+
+message {
+    background-color: @bg2;
+    border: 1px solid;
+    border-color: @bg3;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 0 12px 0;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg2;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 8px;
+    margin: 16px 0 0 0;
+}
+
+button {
+    background-color: @bg1;
+    border: 1px solid;
+    border-color: @bg2;
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-color: @fg3;
+    font: "JetBrainsMono Nerd Font Medium 10";
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @accent;
+    border-color: @accent;
+    text-color: @bgh;
+    font: "JetBrainsMono Nerd Font Bold 10";
+}
+
+/* Animation and transitions */
+element {
+    children: [element-icon, element-text];
 }

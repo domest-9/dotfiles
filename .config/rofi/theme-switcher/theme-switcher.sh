@@ -6,7 +6,11 @@ THEME_DIR="$HOME/.config/themes"
 
 # Prompt for theme if not given as argument
 if [ -z "$THEME" ]; then
-    THEME=$(ls "$THEME_DIR" | grep -vE '\.sh$|\.rasi$|\.md$' | rofi -dmenu -p "Select theme:")
+    THEME=$(ls "$THEME_DIR" | grep -vE '\.sh$|\.rasi$|\.md$' | rofi -dmenu \
+        -p "Select theme" \
+        -theme ~/.config/rofi/theme-switcher/theme-switcher.rasi \
+        -no-custom \
+        -i)
 fi
 
 WAYBAR_CSS_SRC="$THEME_DIR/$THEME/waybar.css"
