@@ -13,15 +13,20 @@ if [ -z "$THEME" ]; then
         -i)
 fi
 
+# Paths for theme assets
 WAYBAR_CSS_SRC="$THEME_DIR/$THEME/waybar.css"
 WAYBAR_CSS_DEST="$HOME/.config/waybar/waybar.css"
+ROFI_COLORS_SRC="$THEME_DIR/$THEME/colors.rasi"
+ROFI_COLORS_DEST="$HOME/.config/rofi/colors.rasi"
 
 # --- Functions ---
 function set_gtk_theme {
+    # Placeholder: implement GTK theme switching if desired
     :
 }
 
 function set_icon_theme {
+    # Placeholder: implement icon theme switching if desired
     :
 }
 
@@ -37,25 +42,29 @@ set_gtk_theme
 # --- Icon Theme ---
 set_icon_theme
 
+# --- Ensure Rofi directory exists ---
+mkdir -p "$HOME/.config/rofi"
+
 # --- Waybar ---
 if [ -f "$WAYBAR_CSS_SRC" ]; then
-    # Stop waybar completely
-    killall waybar
-    # Wait for it to fully terminate
+    killall waybar 2>/dev/null || true
     sleep 0.5
-
-    # Copy new theme
     cp "$WAYBAR_CSS_SRC" "$WAYBAR_CSS_DEST"
-
-    # Start waybar detached
     nohup waybar >/dev/null 2>&1 &
-
-    # Wait for waybar to start
     sleep 0.5
 else
     echo "Waybar CSS theme not found for $THEME"
     > "$WAYBAR_CSS_DEST"
 fi
 
+# --- Rofi Colors ---
+if [ -f "$ROFI_COLORS_SRC" ]; then
+    cp "$ROFI_COLORS_SRC" "$ROFI_COLORS_DEST"
+    echo "Updated Rofi colors: $ROFI_COLORS_DEST"
+else
+    echo "Rofi colors.rasi not found for $THEME"
+    > "$ROFI_COLORS_DEST"
+fi
+
 # --- Notify ---
-notify-send "Theme switched to $THEME" "GTK, Icon, and Waybar themes have been updated."
+notify-send "Theme switched to $THEME" "GTK, Icon, Waybar, and Rofi colors have been updated."

@@ -1,0 +1,66 @@
+/* Nord */
+
+@define-color bg0_h           #2e3440;
+@define-color bg0             #3b4252;
+@define-color bg1             #434c5e;
+@define-color bg2             #4c566a;
+@define-color bg3             #576075;
+@define-color bg4             #626c82;
+@define-color gray            #7b88a1;
+@define-color fg4             #8892a8;
+@define-color fg3             #e5e9f0;
+@define-color fg2             #eceff4;
+@define-color fg1             #d8dee9;
+@define-color fg0             #ffffff;
+@define-color red             #bf616a;
+@define-color bright_red      #d08770;
+@define-color green           #a3be8c;
+@define-color bright_green    #8fbcbb;
+@define-color yellow          #ebcb8b;
+@define-color bright_yellow   #f0d399;
+@define-color blue            #5e81ac;
+@define-color bright_blue     #81a1c1;
+@define-color purple          #b48ead;
+@define-color bright_purple   #c895bf;
+@define-color aqua            #8fbcbb;
+@define-color bright_aqua     #88c0d0;
+@define-color orange          #d08770;
+@define-color bright_orange   #e5a280;
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+/* Main Colors */
+@define-color shadow          shade(@bg0_h, 0.5);
+@define-color main-fg         @fg3;
+@define-color main-bg         @bg0_h;
+@define-color main-br         @fg4;
+
+@define-color active-bg       @blue;
+@define-color active-fg       @bg0_h;
+
+@define-color hover-bg        @bg2;
+@define-color hover-fg        alpha(@fg0, 0.75);
+
+/* Module Colors */
+@define-color module-fg       @fg3;
+@define-color workspaces      @bg1;
+
+@define-color cpuinfo         @bg1;
+@define-color memory          @bg2;
+@define-color cpu             @bg3;
+@define-color distro-fg       @bg0_h;
+@define-color distro-bg       @bright_blue;
+@define-color time            @bg3;
+@define-color date            @bg2;
+@define-color tray            @bg1;
+
+@define-color pulseaudio      @bg1;
+@define-color backlight       @bg2;
+@define-color battery         @bg3;
+@define-color power           @blue;
+
+/* State Colors */
+@define-color warning         @yellow;
+@define-color critical        @red;
+@define-color charging        @fg2;

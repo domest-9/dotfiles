@@ -1,0 +1,60 @@
+/* Evergreen */
+
+@define-color bg0_h           #1a1f1a;
+@define-color bg0             #232923;
+@define-color bg1             #2d332d;
+@define-color bg2             #373d37;
+@define-color bg3             #424842;
+@define-color bg4             #4f554f;
+@define-color gray            #6a706a;
+@define-color fg4             #879487;
+@define-color fg3             #a5b2a5;
+@define-color fg2             #c3ccc3;
+@define-color fg1             #dae0da;
+@define-color fg0             #eef2ee;
+@define-color green           #7da869;
+@define-color bright_green    #98c587;
+@define-color sage           #86a394;
+@define-color moss           #739681;
+@define-color forest         #587d63;
+@define-color pine           #436b4d;
+@define-color brown          #8b7355;
+@define-color earth          #6b604c;
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+/* Main Colors */
+@define-color shadow          shade(@bg0_h, 0.5);
+@define-color main-fg         @fg3;
+@define-color main-bg         @bg0_h;
+@define-color main-br         @fg4;
+
+@define-color active-bg       @green;
+@define-color active-fg       @bg0_h;
+
+@define-color hover-bg        @bg2;
+@define-color hover-fg        alpha(@fg0, 0.75);
+
+/* Module Colors */
+@define-color module-fg       @fg3;
+@define-color workspaces      @bg1;
+
+@define-color cpuinfo         @bg1;
+@define-color memory          @bg2;
+@define-color cpu             @bg3;
+@define-color distro-fg       @bg0_h;
+@define-color distro-bg       @bright_green;
+@define-color time            @bg3;
+@define-color date            @bg2;
+@define-color tray            @bg1;
+
+@define-color pulseaudio      @bg1;
+@define-color backlight       @bg2;
+@define-color battery         @bg3;
+@define-color power           @green;
+
+/* State Colors */
+@define-color warning         @brown;
+@define-color critical        @earth;
+@define-color charging        @fg2;

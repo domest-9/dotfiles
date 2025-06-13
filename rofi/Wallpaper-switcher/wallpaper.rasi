@@ -27,7 +27,7 @@ inputbar {
     border-radius: 12px;
     background-color: @bg1;
     text-color: @fg;
-    children: [prompt];
+    children: [prompt, entry];
     orientation: horizontal;
     padding: 10px 18px;
 }
@@ -36,6 +36,12 @@ prompt {
     padding: 0;
     text-color: @accent;
     font: "JetBrainsMono Nerd Font Bold 14";
+}
+
+entry {
+    placeholder: "Search";
+    text-color: @fg;
+    expand: true;
 }
 
 listview {

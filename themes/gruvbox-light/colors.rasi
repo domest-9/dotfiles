@@ -1,0 +1,48 @@
+@theme "/dev/null"
+
+* {
+    bgh: #f9f5d7;
+    bg: #fbf1c7;
+    bg1: #ebdbb2;
+    bg2: #d5c4a1;
+    bg3: #bdae93;
+    bg4: #a89984;
+    gray: #928374;
+    fg4: #7c6f64;
+    fg3: #665c54;
+    fg2: #504945;
+    fg1: #3c3836;
+    fg: #282828;
+    ochre: #d79921;
+    clay: #d65d0e;
+    bone: #fbf1c7;
+    accent: #d79921;
+    accent2: #98971a;
+    white: #ffffff;
+    black: #000000;
+    shadow: rgba(249, 245, 215, 0.5);
+    main-fg: @fg0;
+    main-bg: @bgh;
+    main-br: @fg0;
+    active-bg: @accent;
+    active-fg: @bgh;
+    hover-bg: @bg2;
+    hover-fg: rgba(40, 40, 40, 0.75);
+    module-fg: @fg0;
+    workspaces: @bg;
+    cpuinfo: @bg;
+    memory: @bg1;
+    cpu: @bg2;
+    distro-fg: @black;
+    distro-bg: @accent2;
+    time: @bg2;
+    date: @bg1;
+    tray: @bg;
+    pulseaudio: @bg;
+    backlight: @bg1;
+    battery: @bg2;
+    power: @accent;
+    warning: #af3a03;
+    critical: #9d0006;
+    charging: @fg0;
+}

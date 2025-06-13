@@ -14,7 +14,7 @@ cd "$WALLPAPER_DIR" || exit 1
 shopt -s nullglob
 SELECTED=$(for img in *.{jpg,png,jpeg}; do
     [ -f "$img" ] && echo -en "$(basename "$img")\0icon\x1f$WALLPAPER_DIR/$img\n"
-done | rofi -dmenu -p "Select Wallpaper" -show-icons -theme ~/.config/rofi/Wallpaper-switcher/wallpaper.rasi)
+done | rofi -dmenu -p "Select Wallpaper" -show-icons -theme ~/.config/rofi/Wallpaper-switcher/wallpaper.rasi -matching fuzzy -i)
 shopt -u nullglob
 
 # Convert selected filename back to full path
