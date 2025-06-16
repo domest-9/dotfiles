@@ -85,3 +85,7 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - Foliate -> Book reader
 - Dolphin -> File manager
 - Yazi -> File manager
+- Pyprland -> Hyprland configuration manager
+- Hyprpaper -> Wallpaper manager
+- Hyprsunset -> remove blue light
+
