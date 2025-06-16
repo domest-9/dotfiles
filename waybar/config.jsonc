@@ -47,10 +47,8 @@
   ],
   // <<--< Modules >-->>
   "custom/ws": {
-    "exec": "~/.config/waybar/scripts/current-theme.sh",
-    "return-type": "json",
     "format": " 󰍜 ",
-    "on-click": "~/.config/waybar/scripts/theme-switcher.sh",
+    "on-click": "~/.config/rofi/theme-switcher/theme-switcher.sh",
     "min-length": 3,
     "max-length": 3
   },
@@ -187,7 +185,7 @@
     "exec": "~/.config/waybar/scripts/wifi-status.sh",
     "return-type": "json",
     "format": "{}",
-    "on-click": "~/.config/waybar/config.jsonc",
+    "on-click": "~/.config/rofi/Wifi-menu/wifi-menu.sh",
     "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
     "interval": 1,
     "min-length": 1,
@@ -203,7 +201,7 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-enumerate-connected-battery": ":: {device_alias}: 󱊣 {device_battery_percentage}%",
-    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
+    "on-click": "exec blueman-manager",
     "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
     "interval": 1,
     "min-length": 1,
@@ -254,14 +252,14 @@
     "max-length": 6
   },
   "backlight": {
-    "device": "acpi_video0", // changed from intel_backlight for MSI GT73VR 7RE
+    "device": "acpi_video0",
     "format": "{icon} {percent}%",
     "format-icons": [
-      "", "", "", "", "", "", "", "", ""
+    "", "", "", "", "", "", "", "", ""
     ],
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-",
-    "on-click": "/usr/bin/gammastep -O 3500",
+    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh i",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh d",
+    "on-click": "pgrep hyprsunset >/dev/null && pkill hyprsunset || hyprsunset -t 4000 &",
     "interval": 2,
     "min-length": 6,
     "max-length": 6,
@@ -296,7 +294,7 @@
     "format": " ",
     "tooltip": false,
     // "tooltip-format": "Power Menu",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    "on-click": "~/.config/rofi/Power-menu/power-menu.sh"
   },
   // <<--< Padding >-->>
   "custom/paddw": {
@@ -375,4 +373,5 @@
     "format": "",
     "tooltip": false
   }
+}
 }

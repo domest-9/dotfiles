@@ -258,12 +258,15 @@ tooltip label {
 
 /* ---------------------------------------------------------------- tray --- */
 
-#network {
+#network,
+#custom-wifi {
   background: @tray;
+  color: @module-fg;  /* Add this line to ensure consistent color */
   padding: 0 8px 0 5px;
 }
 
-#network:hover {
+#network:hover,
+#custom-wifi:hover {
   color: @hover-fg;
 }
 
