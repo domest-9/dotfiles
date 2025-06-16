@@ -38,3 +38,8 @@ sudo systemctl enable --now NetworkManager
 
 
 ## Waybar
+
+
+## Display Manager 
+1. https://github.com/stepanzubkov/where-is-my-sddm-theme
+2. Ly 
