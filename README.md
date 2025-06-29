@@ -88,4 +88,4 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - Pyprland -> Hyprland configuration manager
 - Hyprpaper -> Wallpaper manager
 - Hyprsunset -> remove blue light
-
+- p7zip -> unzip files
