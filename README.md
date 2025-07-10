@@ -90,3 +90,4 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - Hyprsunset -> remove blue light
 - p7zip -> unzip files
 - wl-copy -> copy to clipboard
+- pavucontrol -> volume control
