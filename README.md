@@ -91,3 +91,4 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - p7zip -> unzip files
 - wl-copy -> copy to clipboard
 - pavucontrol -> volume control
+- python python-gobject gtk4 -> apps like clock
