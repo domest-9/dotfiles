@@ -93,3 +93,5 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - pavucontrol -> volume control
 - python python-gobject gtk4 -> apps like clock
 - youtube-dl -> stream player
+
+- sudo pacman -S python-gobject gtk3 pamixer brightnessctl networkmanager bluez-utils grim slurp wf-recorder redshift
