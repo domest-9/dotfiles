@@ -92,3 +92,4 @@ ExecStart=-/sbin/agetty --autologin domest --noclear %I $TERM
 - wl-copy -> copy to clipboard
 - pavucontrol -> volume control
 - python python-gobject gtk4 -> apps like clock
+- youtube-dl -> stream player
